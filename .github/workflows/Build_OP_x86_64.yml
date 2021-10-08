@@ -42,6 +42,8 @@ jobs:
     - name: Server Benchmark
       run: |
         wget -qO- --no-check-certificate https://raw.githubusercontent.com/Kurokosama/serverbench/main/bench.sh | bash
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master    
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/coolsnowwolf/lede
